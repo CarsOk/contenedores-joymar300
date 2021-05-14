@@ -1,4 +1,4 @@
-import 'package:ejeplo1/pages/my_home_page.dart';
+import 'package:ejeplo1/pages/firtspage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,8 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'prueba',
-      home: MyHomePage(),
+      home: Firtspage(),
       debugShowCheckedModeBanner: false,
     );
   }
