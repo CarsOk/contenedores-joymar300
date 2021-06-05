@@ -23,9 +23,6 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('hola'),
-        ),
         body: _paginas[_pagActual],
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {

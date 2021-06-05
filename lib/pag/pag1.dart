@@ -18,6 +18,9 @@ class _Pag1State extends State<Pag1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text('users'),
+        ),
         body: StreamBuilder(
             stream: FirebaseFirestore.instance.collection('users').snapshots(),
             builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
