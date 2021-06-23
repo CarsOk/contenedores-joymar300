@@ -40,7 +40,9 @@ class _Pag3State extends State<Pag3> {
         ),
         body: Container(
           child: postList.length == 0
-              ? Text('no blog aviable')
+              ? Center(
+                  child: CircularProgressIndicator(),
+                )
               : ListView.builder(
                   itemCount: postList.length,
                   itemBuilder: (BuildContext context, int index) {
@@ -77,9 +79,25 @@ class _Pag3State extends State<Pag3> {
             SizedBox(
               height: 10,
             ),
-            Image.network(
-              image,
-              fit: BoxFit.cover,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return Scaffold(
+                    appBar: AppBar(
+                      backgroundColor: Colors.black,
+                    ),
+                    body: Center(
+                      child: Image.network(image),
+                    ),
+                    backgroundColor: Colors.black,
+                  );
+                }));
+              },
+              child: Image.network(
+                image,
+                fit: BoxFit.cover,
+              ),
             ),
             SizedBox(
               height: 10,

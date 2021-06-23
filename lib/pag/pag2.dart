@@ -1,6 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:galeria/main.dart';
 import 'package:galeria/pag/pag3.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
@@ -93,8 +94,9 @@ class _Pag2State extends State<Pag2> {
       saveData(url);
 
       //regresar a home
-      Navigator.pop(context);
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Pag3()));
+
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => MyApp()));
     }
   }
 
